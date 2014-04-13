@@ -1,5 +1,5 @@
 require "spec_helper"
 
-RSpec.describe Blankgem do
+RSpec.describe Scrawl do
 
 end
