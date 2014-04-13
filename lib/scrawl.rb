@@ -3,11 +3,11 @@ require "forwardable"
 class Scrawl
   extend Forwardable
 
-  require_relative "scrawl/version"
+  KEY_VALUE_DELIMITER = "="
+  PAIR_DELIMITER = " "
+  NAMESPACE_DELIMITER = "."
 
-  KEY_VALUE_DELIMITER = "=".freeze
-  PAIR_DELIMITER = " ".freeze
-  NAMESPACE_DELIMITER = ".".freeze
+  require_relative "scrawl/version"
 
   attr_reader :tree
   def_delegator :tree, :to_hash
