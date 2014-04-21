@@ -12,7 +12,6 @@ scrawl
   - [![License](http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](http://opensource.org/licenses/MIT)
   - [![Version](http://img.shields.io/gem/v/scrawl.svg?style=flat-square)](https://rubygems.org/gems/scrawl)
 
-
 This is a simple object that turns hashes, even nested, into Heroku like log strings.
 
 It is a smaller, faster, and I believe more OO way to do [scrolls](https://github.com/asenchi/scrolls).
