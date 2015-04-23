@@ -1,146 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-us">
   <head>
-    <meta charset='utf-8'>
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="viewport" content="width=640" />
-
-    <link rel="stylesheet" href="stylesheets/core.css" media="screen"/>
-    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)"/>
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css"/>
-
-    <script type="text/javascript" src="javascripts/modernizr.js"></script>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
-    <script type="text/javascript">
-      $(document).ready(function () {
-        $('#main_content').headsmart()
-      })
-    </script>
+    <meta charset="UTF-8">
     <title>Scrawl.gem by krainboltgreene</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
   </head>
-
   <body>
-    <a id="forkme_banner" href="https://github.com/krainboltgreene/scrawl.gem">View on GitHub</a>
-    <div class="shell">
+    <section class="page-header">
+      <h1 class="project-name">Scrawl.gem</h1>
+      <h2 class="project-tagline">Turn hash-likes into simple key=value logging statements</h2>
+      <a href="https://github.com/krainboltgreene/scrawl.gem" class="btn">View on GitHub</a>
+      <a href="https://github.com/krainboltgreene/scrawl.gem/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/krainboltgreene/scrawl.gem/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
-      <header>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <h1>Scrawl.gem</h1>
-            <h2>Turn hash-likes into simple key=value logging statements</h2>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-      </header>
-
-      <section id="downloads">
-        <span class="inner">
-          <a href="https://github.com/krainboltgreene/scrawl.gem/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/krainboltgreene/scrawl.gem/tarball/master" class="tgz"><em>download</em> .TGZ</a>
-        </span>
-      </section>
-
-
-      <span class="banner-fix"></span>
-
-
-      <section id="main_content">
-        <p><a href="https://rubygems.org/gems/scrawl"><img src="http://img.shields.io/gem/v/scrawl.svg" alt="Version"></a>
-<a href="https://codeclimate.com/github/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/codeclimate/github/krainboltgreene/scrawl.gem.svg" alt="Climate"></a>
-<a href="https://travis-ci.org/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/travis/krainboltgreene/scrawl.gem.svg" alt="Build"></a>
-<a href="https://gemnasium.com/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/gemnasium/krainboltgreene/scrawl.gem.svg" alt="Dependencies"></a>
-<a href="https://codeclimate.com/github/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/codeclimate/coverage/github/krainboltgreene/scrawl.gem.svg" alt="Coverage"></a>
-<a href="https://www.gittip.com/krainboltgreene/"><img src="http://img.shields.io/gittip/krainboltgreene.png" alt="Gittip"></a>
-<a href="http://opensource.org/licenses/MIT"><img src="http://img.shields.io/license/MIT.png?color=green" alt="License"></a>
-<img src="http://img.shields.io/github/tag/krainboltgreene/scrawl.gem.svg" alt="Tag"><img src="http://img.shields.io/github/release/krainboltgreene/scrawl.gem.svg" alt="Release"></p>
+    <section class="main-content">
+      <ul>
+<li><a href="https://codeclimate.com/github/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/codeclimate/github/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Quality"></a></li>
+<li><a href="https://codeclimate.com/github/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/codeclimate/coverage/github/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Coverage"></a></li>
+<li><a href="https://travis-ci.org/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/travis-ci/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Build"></a></li>
+<li><a href="https://gemnasium.com/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/gemnasium/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Dependencies"></a></li>
+<li><a href="https://rubygems.org/gems/scrawl"><img src="http://img.shields.io/gem/dtv/scrawl.svg?style=flat-square" alt="Downloads"></a></li>
+<li><a href="http://github.com/krainboltgreene/scrawl.gem/tags"><img src="http://img.shields.io/github/tag/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Tags"></a></li>
+<li><a href="http://github.com/krainboltgreene/scrawl.gem/releases"><img src="http://img.shields.io/github/release/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Releases"></a></li>
+<li><a href="http://github.com/krainboltgreene/scrawl.gem/issues"><img src="http://img.shields.io/github/issues/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Issues"></a></li>
+<li><a href="http://opensource.org/licenses/MIT"><img src="http://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square" alt="License"></a></li>
+<li><a href="https://rubygems.org/gems/scrawl"><img src="http://img.shields.io/gem/v/scrawl.svg?style=flat-square" alt="Version"></a></li>
+</ul>
 
 <p>This is a simple object that turns hashes, even nested, into Heroku like log strings.</p>
 
 <p>It is a smaller, faster, and I believe more OO way to do <a href="https://github.com/asenchi/scrolls">scrolls</a>.</p>
 
 <h1>
-<a name="using" class="anchor" href="#using"><span class="octicon octicon-link"></span></a>Using</h1>
+<a id="using" class="anchor" href="#using" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using</h1>
 
 <p>The <code>Scrawl</code> object gives you a simple interface:</p>
 
-<div class="highlight highlight-ruby"><pre><span class="nb">require</span> <span class="s2">"scrawl"</span>
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>scrawl<span class="pl-pds">"</span></span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="no">Scrawl</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">app</span><span class="p">:</span> <span class="s2">"scrawl"</span><span class="p">,</span> <span class="ss">state</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
-<span class="n">data</span><span class="o">.</span><span class="n">inspect</span>
-  <span class="c1"># =&gt; "app=\"scrawl\" state=0"</span>
-<span class="nb">puts</span> <span class="n">data</span><span class="o">.</span><span class="n">inspect</span>
-  <span class="c1"># =&gt; app="scrawl" state=0</span>
-</pre></div>
+data <span class="pl-k">=</span> <span class="pl-c1">Scrawl</span>.<span class="pl-k">new</span>(<span class="pl-c1">app:</span> <span class="pl-s"><span class="pl-pds">"</span>scrawl<span class="pl-pds">"</span></span>, <span class="pl-c1">state:</span> <span class="pl-c1">0</span>)
+data.inspect
+  <span class="pl-c"># =&gt; "app=\"scrawl\" state=0"</span>
+puts data.inspect
+  <span class="pl-c"># =&gt; app="scrawl" state=0</span></pre></div>
 
 <p>It also does some nice things:</p>
 
-<div class="highlight highlight-ruby"><pre><span class="nb">require</span> <span class="s2">"scrawl"</span>
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>scrawl<span class="pl-pds">"</span></span>
 
-<span class="n">data</span> <span class="o">=</span> <span class="no">Scrawl</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">now</span><span class="p">:</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span> <span class="p">})</span>
-<span class="nb">puts</span> <span class="n">data</span><span class="o">.</span><span class="n">inspect</span>
-  <span class="c1"># =&gt; now="2014-04-13 01:36:18 -0500"</span>
-<span class="nb">puts</span> <span class="n">data</span><span class="o">.</span><span class="n">inspect</span>
-  <span class="c1"># =&gt; now="2014-04-13 01:36:19 -0500"</span>
-<span class="nb">puts</span> <span class="n">data</span><span class="o">.</span><span class="n">inspect</span>
-  <span class="c1"># =&gt; now="2014-04-13 01:36:20 -0500"</span>
-</pre></div>
+data <span class="pl-k">=</span> <span class="pl-c1">Scrawl</span>.<span class="pl-k">new</span>(<span class="pl-c1">now:</span> <span class="pl-k">-</span><span class="pl-k">&gt;</span> { <span class="pl-c1">Time</span>.now })
+puts data.inspect
+  <span class="pl-c"># =&gt; now="2014-04-13 01:36:18 -0500"</span>
+puts data.inspect
+  <span class="pl-c"># =&gt; now="2014-04-13 01:36:19 -0500"</span>
+puts data.inspect
+  <span class="pl-c"># =&gt; now="2014-04-13 01:36:20 -0500"</span></pre></div>
 
 <p>You can also handle a "global" set of values:</p>
 
-<div class="highlight highlight-ruby"><pre><span class="nb">require</span> <span class="s2">"logger"</span>
-<span class="nb">require</span> <span class="s2">"scrawl"</span>
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>logger<span class="pl-pds">"</span></span>
+<span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>scrawl<span class="pl-pds">"</span></span>
 
-<span class="n">logger</span> <span class="o">=</span> <span class="no">Logger</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">STDOUT</span><span class="p">)</span>
-<span class="n">global</span> <span class="o">=</span> <span class="no">Scrawl</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">now</span><span class="p">:</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span> <span class="p">},</span> <span class="ss">app</span><span class="p">:</span> <span class="s2">"scrawl"</span><span class="p">,</span> <span class="ss">state</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span>
+logger <span class="pl-k">=</span> <span class="pl-c1">Logger</span>.<span class="pl-k">new</span>(<span class="pl-c1">STDOUT</span>)
+global <span class="pl-k">=</span> <span class="pl-c1">Scrawl</span>.<span class="pl-k">new</span>(<span class="pl-c1">now:</span> <span class="pl-k">-</span><span class="pl-k">&gt;</span> { <span class="pl-c1">Time</span>.now }, <span class="pl-c1">app:</span> <span class="pl-s"><span class="pl-pds">"</span>scrawl<span class="pl-pds">"</span></span>, <span class="pl-c1">state:</span> <span class="pl-c1">0</span>)
 
-<span class="c1"># ...</span>
+<span class="pl-c"># ...</span>
 
-<span class="k">def</span> <span class="nf">report_user</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
-  <span class="n">user</span><span class="o">.</span><span class="n">report!</span>
-  <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">global</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="ss">message</span><span class="p">:</span> <span class="s2">"Bank has been reported."</span><span class="p">))</span>
-    <span class="c1"># =&gt; now="2014-04-13 01:36:20 -0500" app="scrawl" state=0 message="Bank has been reported."</span>
-<span class="k">end</span>
+<span class="pl-k">def</span> <span class="pl-en">report_user</span>(<span class="pl-smi">user</span>)
+  user.report!
+  logger.info(global.merge(<span class="pl-c1">message:</span> <span class="pl-s"><span class="pl-pds">"</span>Bank has been reported.<span class="pl-pds">"</span></span>))
+    <span class="pl-c"># =&gt; now="2014-04-13 01:36:20 -0500" app="scrawl" state=0 message="Bank has been reported."</span>
+<span class="pl-k">end</span>
 
-<span class="c1"># ...</span>
-</pre></div>
+<span class="pl-c"># ...</span></pre></div>
 
 <p>We've also got a way to combine multiple statement objects:</p>
 
-<div class="highlight highlight-ruby"><pre><span class="nb">require</span> <span class="s2">"logger"</span>
-<span class="nb">require</span> <span class="s2">"scrawl"</span>
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>logger<span class="pl-pds">"</span></span>
+<span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>scrawl<span class="pl-pds">"</span></span>
 
-<span class="n">logger</span> <span class="o">=</span> <span class="no">Logger</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="no">STDOUT</span><span class="p">)</span>
+logger <span class="pl-k">=</span> <span class="pl-c1">Logger</span>.<span class="pl-k">new</span>(<span class="pl-c1">STDOUT</span>)
 
-<span class="n">global</span> <span class="o">=</span> <span class="no">Scrawl</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">now</span><span class="p">:</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span> <span class="p">})</span>
-<span class="n">application</span> <span class="o">=</span> <span class="no">Scrawl</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">app</span><span class="p">:</span> <span class="s2">"scrawl"</span><span class="p">,</span> <span class="ss">version</span><span class="p">:</span> <span class="no">ENV</span><span class="o">[</span><span class="s2">"VERSION"</span><span class="o">]</span><span class="p">)</span>
+global <span class="pl-k">=</span> <span class="pl-c1">Scrawl</span>.<span class="pl-k">new</span>(<span class="pl-c1">now:</span> <span class="pl-k">-</span><span class="pl-k">&gt;</span> { <span class="pl-c1">Time</span>.now })
+application <span class="pl-k">=</span> <span class="pl-c1">Scrawl</span>.<span class="pl-k">new</span>(<span class="pl-c1">app:</span> <span class="pl-s"><span class="pl-pds">"</span>scrawl<span class="pl-pds">"</span></span>, <span class="pl-c1">version:</span> <span class="pl-c1">ENV</span>[<span class="pl-s"><span class="pl-pds">"</span>VERSION<span class="pl-pds">"</span></span>])
 
-<span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="no">Scrawl</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="n">global</span><span class="p">,</span> <span class="n">application</span><span class="p">,</span> <span class="ss">message</span><span class="p">:</span> <span class="s2">"Hello, World"</span><span class="p">))</span>
-</pre></div>
+logger.info(<span class="pl-c1">Scrawl</span>.<span class="pl-k">new</span>(global, application, <span class="pl-c1">message:</span> <span class="pl-s"><span class="pl-pds">"</span>Hello, World<span class="pl-pds">"</span></span>))</pre></div>
 
 <p>Finall, nesting:</p>
 
-<div class="highlight highlight-ruby"><pre><span class="nb">require</span> <span class="s2">"scrawl"</span>
+<div class="highlight highlight-ruby"><pre><span class="pl-k">require</span> <span class="pl-s"><span class="pl-pds">"</span>scrawl<span class="pl-pds">"</span></span>
 
-<span class="n">global</span> <span class="o">=</span> <span class="no">Scrawl</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">now</span><span class="p">:</span> <span class="o">-&gt;</span> <span class="p">{</span> <span class="no">Time</span><span class="o">.</span><span class="n">now</span> <span class="p">})</span>
-<span class="n">application</span> <span class="o">=</span> <span class="no">Scrawl</span><span class="o">.</span><span class="n">new</span><span class="p">(</span><span class="ss">app</span><span class="p">:</span> <span class="p">{</span> <span class="nb">name</span><span class="p">:</span> <span class="s2">"scrawl"</span><span class="p">,</span> <span class="ss">version</span><span class="p">:</span> <span class="no">ENV</span><span class="o">[</span><span class="s2">"VERSION"</span><span class="o">]</span> <span class="p">})</span>
+global <span class="pl-k">=</span> <span class="pl-c1">Scrawl</span>.<span class="pl-k">new</span>(<span class="pl-c1">now:</span> <span class="pl-k">-</span><span class="pl-k">&gt;</span> { <span class="pl-c1">Time</span>.now })
+application <span class="pl-k">=</span> <span class="pl-c1">Scrawl</span>.<span class="pl-k">new</span>(<span class="pl-c1">app:</span> { <span class="pl-c1">name:</span> <span class="pl-s"><span class="pl-pds">"</span>scrawl<span class="pl-pds">"</span></span>, <span class="pl-c1">version:</span> <span class="pl-c1">ENV</span>[<span class="pl-s"><span class="pl-pds">"</span>VERSION<span class="pl-pds">"</span></span>] })
 
-<span class="c1"># ...</span>
+<span class="pl-c"># ...</span>
 
-<span class="k">def</span> <span class="nf">report_user</span><span class="p">(</span><span class="n">user</span><span class="p">)</span>
-  <span class="k">begin</span>
-    <span class="n">user</span><span class="o">.</span><span class="n">report!</span>
-  <span class="k">rescue</span> <span class="o">=&gt;</span> <span class="n">exception</span>
-  <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">global</span><span class="o">.</span><span class="n">merge</span><span class="p">(</span><span class="n">global</span><span class="p">,</span> <span class="n">application</span><span class="p">,</span> <span class="ss">error</span><span class="p">:</span> <span class="p">{</span> <span class="ss">exception</span><span class="p">:</span> <span class="n">exception</span><span class="p">,</span> <span class="ss">message</span><span class="p">:</span> <span class="s2">"Bank wasnt been reported."</span> <span class="p">}))</span>
-    <span class="c1"># =&gt; now="2014-04-13 01:36:20 -0500" app.name="scrawl" app.version=0 error.exception=... error.message="Bank has been reported."</span>
-  <span class="k">end</span>
-<span class="k">end</span>
+<span class="pl-k">def</span> <span class="pl-en">report_user</span>(<span class="pl-smi">user</span>)
+  <span class="pl-k">begin</span>
+    user.report!
+  <span class="pl-k">rescue</span> =&gt; exception
+  logger.info(global.merge(global, application, <span class="pl-c1">error:</span> { <span class="pl-c1">exception:</span> exception, <span class="pl-c1">message:</span> <span class="pl-s"><span class="pl-pds">"</span>Bank wasnt been reported.<span class="pl-pds">"</span></span> }))
+    <span class="pl-c"># =&gt; now="2014-04-13 01:36:20 -0500" app.name="scrawl" app.version=0 error.exception=... error.message="Bank has been reported."</span>
+  <span class="pl-k">end</span>
+<span class="pl-k">end</span>
 
-<span class="c1"># ...</span>
-</pre></div>
+<span class="pl-c"># ...</span></pre></div>
 
 <h1>
-<a name="installing" class="anchor" href="#installing"><span class="octicon octicon-link"></span></a>Installing</h1>
+<a id="installing" class="anchor" href="#installing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Installing</h1>
 
 <p>Add this line to your application's Gemfile:</p>
 
@@ -158,7 +130,7 @@
 </code></pre>
 
 <h1>
-<a name="contributing" class="anchor" href="#contributing"><span class="octicon octicon-link"></span></a>Contributing</h1>
+<a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h1>
 
 <ol>
 <li>Fork it</li>
@@ -166,8 +138,17 @@
 <li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
 <li>Push to the branch (<code>git push origin my-new-feature</code>)</li>
 <li>Create new Pull Request</li>
-</ol><h1>
-<a name="licensing" class="anchor" href="#licensing"><span class="octicon octicon-link"></span></a>Licensing</h1>
+</ol>
+
+<h1>
+<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog</h1>
+
+<ul>
+<li>1.0.0: Initial release</li>
+</ul>
+
+<h1>
+<a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
 
 <p>Copyright (c) 2014 Kurtis Rainbolt-Greene</p>
 
@@ -191,22 +172,26 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
-      </section>
 
-      <footer>
-        <span class="ribbon-outer">
-          <span class="ribbon-inner">
-            <p>this project by <a href="https://github.com/krainboltgreene">krainboltgreene</a> can be found on <a href="https://github.com/krainboltgreene/scrawl.gem">GitHub</a></p>
-          </span>
-          <span class="left-tail"></span>
-          <span class="right-tail"></span>
-        </span>
-        <p>Generated with <a href="http://pages.github.com">GitHub Pages</a> using Merlot</p>
-        <span class="octocat"></span>
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/krainboltgreene/scrawl.gem">Scrawl.gem</a> is maintained by <a href="https://github.com/krainboltgreene">krainboltgreene</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
 
-    </div>
+    </section>
 
-    
+            <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-18715035-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
   </body>
 </html>
+
