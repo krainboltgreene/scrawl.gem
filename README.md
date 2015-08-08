@@ -108,7 +108,7 @@ Installing
 
 Add this line to your application's Gemfile:
 
-    gem "scrawl", "~> 1.0"
+    gem "scrawl", "~> 1.1"
 
 And then execute:
 
@@ -132,6 +132,10 @@ Contributing
 Changelog
 =========
 
+  - 1.1.0: 
+    * Updating CoC
+    * Adding Regexp support
+    * Allowing for use of `#to_s`
   - 1.0.0: Initial release
 
 
