@@ -114,6 +114,13 @@ RSpec.describe Scrawl do
           expect(inspect).to include("\"example\"")
         end
       end
+
+      context "and a regexp value" do
+        let(:input) { { a: /foo(.+)/ } }
+        it "returns the escaped regexp" do
+          expect(inspect).to include(/foo(.+)/.to_s)
+        end
+      end
     end
 
     context "with multiple pairs" do
@@ -144,7 +151,7 @@ RSpec.describe Scrawl do
     end
   end
 
-  describe "#tree"do
+  describe "#tree" do
     let(:tree) { scrawl.tree }
 
     it "returns the internal tree" do
@@ -160,7 +167,7 @@ RSpec.describe Scrawl do
     end
   end
 
-  describe "#to_hash"do
+  describe "#to_hash" do
     let(:to_hash) { scrawl.to_hash }
 
     it "returns the internal tree" do

@@ -31,16 +31,21 @@ class Scrawl
     end.join(PAIR_DELIMITER)
   end
 
+  def to_s(namespace = nil)
+    inspect(namespace)
+  end
+
   private def label(namespace, key)
     [namespace, key].compact.join(NAMESPACE_DELIMITER)
   end
 
   private def element(value)
     case value
-    when Proc then value.call
-    when Numeric then value
-    when Symbol then value.to_s
-    else value
+      when Proc then value.call
+      when Numeric then value
+      when Symbol then value.to_s
+      when Regexp then value.to_s
+      else value
     end.inspect
   end
 end
