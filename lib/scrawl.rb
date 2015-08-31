@@ -18,7 +18,7 @@ class Scrawl
   def inspect(namespace = nil)
     @tree.map do |key, value|
       unless value.respond_to?(:to_hash)
-        "#{label(namespace, key)}#{KEY_VALUE_DELIMITER}#{element(value)}"
+        label(namespace, key) + KEY_VALUE_DELIMITER + element(value)
       else
         Scrawl.new(value).inspect(key)
       end
