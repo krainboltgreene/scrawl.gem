@@ -41,10 +41,6 @@ RSpec.describe Scrawl do
       context "scrawl objects" do
         let(:trees) { [Scrawl.new(a: 1), Scrawl.new(b: 2)] }
       end
-
-      context "hash and scrawl objects" do
-
-      end
     end
   end
 
@@ -84,41 +80,55 @@ RSpec.describe Scrawl do
         let(:input) { { a: "example" } }
 
         it "includes the escaped text" do
-          expect(inspect).to include("\"example\"")
+          expect(inspect).to eq("a=\"example\"")
         end
       end
 
       context "and a proc value" do
-        let(:input) { { a: -> { "example#{rand(1..10_000)}" } } }
+        let(:input) { { a: -> { "example#{1 + 1}" } } }
 
         it "evaluate the proc" do
-          expect(inspect).to include("example")
+          expect(inspect).to eq("a=\"example2\"")
         end
 
-        it "never stores the value" do
-          first = scrawl.inspect
-          second = scrawl.inspect
-          expect(first).to_not eq(second)
+        context "with a random portion" do
+          let(:input) { { a: -> { "example#{rand(1..100000)}" } } }
+
+          it "never stores the value" do
+            first = scrawl.inspect
+            second = scrawl.inspect
+            expect(first).to_not eq(second)
+          end
         end
       end
 
       context "and a number value" do
         it "returns just the number" do
-          expect(inspect).to include("=1")
+          expect(inspect).to eq("a=1")
         end
       end
 
       context "and a symbol value" do
         let(:input) { { a: :example } }
+
         it "returns the escaped string equivelent" do
-          expect(inspect).to include("\"example\"")
+          expect(inspect).to eq("a=\"example\"")
         end
       end
 
       context "and a regexp value" do
         let(:input) { { a: /foo(.+)/ } }
+
         it "returns the escaped regexp" do
-          expect(inspect).to include("/foo(.+)/")
+          expect(inspect).to eq("a=/foo(.+)/")
+        end
+      end
+
+      context "and a hash" do
+        let(:input) { { a: Hash.new } }
+
+        it "returns as if nil" do
+          expect(inspect).to eq("a=nil")
         end
       end
     end

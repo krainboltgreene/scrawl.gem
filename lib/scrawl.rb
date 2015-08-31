@@ -17,10 +17,13 @@ class Scrawl
 
   def inspect(namespace = nil)
     @tree.map do |key, value|
-      unless value.respond_to?(:to_hash)
-        label(namespace, key) + KEY_VALUE_DELIMITER + element(value)
-      else
+      case
+      when value.kind_of?(Hash) && value.none?
+        label(namespace, key) + KEY_VALUE_DELIMITER + element(nil)
+      when value.respond_to?(:to_hash)
         Scrawl.new(value).inspect(key)
+      else
+        label(namespace, key) + KEY_VALUE_DELIMITER + element(value)
       end
     end.join(PAIR_DELIMITER)
   end
