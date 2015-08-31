@@ -4,18 +4,30 @@ require "scrolls"
 require "logger"
 require "securerandom"
 
+puts ""
+puts "OS Name: #{`uname -a`}"
+puts `sw_vers`
+puts "Ruby Version: #{`ruby -v`}"
+puts "RubyGems Version: #{`gem -v`}"
+puts "RVM Version: #{`rvm -v`}"
+puts ""
+
+Benchmark::IPS.options[:format] = :raw
+
 DATA = (1..100).map { |i| { SecureRandom.hex.to_s => SecureRandom.hex.to_s } }.inject(:merge!)
 
-Scrolls.stream = File.open(File.join("tmp", "scrolls.log"), "w")
-scrawl_logger = Logger.new(File.join("tmp", "scrawl.log"))
+Benchmark.ips do |analysis|
+  analysis.time = 5
+  analysis.warmup = 2
+  analysis.compare!
 
-Benchmark.ips do |x|
-  x.report "scrawl" do
-    o = Scrawl.new(DATA.dup)
-    scrawl_logger.log(0, o.inspect)
+  analysis.report "scrawl logging to file" do
+    scrawl_logger = Logger.new(File.join("tmp", "scrawl.log"))
+    scrawl_logger.log(0, Scrawl.new(DATA.dup).inspect)
   end
 
-  x.report "scrolls" do
+  analysis.report "scrolls logging to file" do
+    Scrolls.stream = File.open(File.join("tmp", "scrolls.log"), "w")
     Scrolls.log(DATA.dup)
   end
 end
