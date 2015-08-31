@@ -19,12 +19,12 @@ Gem::Specification.new do |spec|
   spec.test_files = Dir[File.join("test", "**", "*"), File.join("spec", "**", "*")]
   spec.require_paths = ["lib"]
 
-  spec.add_development_dependency "bundler", "1.10.5"
-  spec.add_development_dependency "rspec", "3.3.0"
-  spec.add_development_dependency "rake", "10.4.2"
-  spec.add_development_dependency "pry", "0.10.1"
-  spec.add_development_dependency "pry-doc", "0.8.0"
-  spec.add_development_dependency "codeclimate-test-reporter", "0.4.7"
-  spec.add_development_dependency "benchmark-ips", "2.3.0"
-  spec.add_development_dependency "ruby-prof", "0.15.8"
+  spec.add_development_dependency "bundler", "~> 1.10"
+  spec.add_development_dependency "rspec", "~> 3.3"
+  spec.add_development_dependency "rake", "~> 10.4"
+  spec.add_development_dependency "pry", "~> 0.10"
+  spec.add_development_dependency "pry-doc", "~> 0.8"
+  spec.add_development_dependency "codeclimate-test-reporter", "~> 0.4"
+  spec.add_development_dependency "benchmark-ips", "~> 2.3"
+  spec.add_development_dependency "ruby-prof", "~> 0.15"
 end
