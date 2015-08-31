@@ -1,8 +1,4 @@
-require "forwardable"
-
 class Scrawl
-  extend Forwardable
-
   KEY_VALUE_DELIMITER = "="
   PAIR_DELIMITER = " "
   NAMESPACE_DELIMITER = "."
@@ -10,8 +6,6 @@ class Scrawl
   require_relative "scrawl/version"
 
   attr_reader :tree
-  def_delegator :tree, :to_hash
-  def_delegator :tree, :to_h
 
   def initialize(*trees)
     @tree = trees.inject({}) { |global, tree| global.merge(tree) }
@@ -33,6 +27,14 @@ class Scrawl
 
   def to_s(namespace = nil)
     inspect(namespace)
+  end
+
+  def to_hash
+    tree.to_hash
+  end
+
+  def to_h
+    tree.to_h
   end
 
   private def label(namespace, key)
