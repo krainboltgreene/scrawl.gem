@@ -118,7 +118,7 @@ RSpec.describe Scrawl do
       context "and a regexp value" do
         let(:input) { { a: /foo(.+)/ } }
         it "returns the escaped regexp" do
-          expect(inspect).to include(/foo(.+)/.to_s)
+          expect(inspect).to include("/foo(.+)/")
         end
       end
     end
