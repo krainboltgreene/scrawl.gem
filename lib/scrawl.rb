@@ -43,8 +43,8 @@ class Scrawl
 
   private def element(value)
     case value
-      when Proc then value.call.inspect
-      when Symbol then value.to_s
+      when Proc then element(value.call)
+      when Symbol then element(value.to_s)
       else value.inspect
     end
   end
