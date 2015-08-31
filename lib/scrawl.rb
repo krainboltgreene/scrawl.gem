@@ -43,11 +43,9 @@ class Scrawl
 
   private def element(value)
     case value
-      when Proc then value.call
-      when Numeric then value
+      when Proc then value.call.inspect
       when Symbol then value.to_s
-      when Regexp then value.to_s
-      else value
-    end.inspect
+      else value.inspect
+    end
   end
 end
