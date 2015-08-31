@@ -108,7 +108,7 @@ Installing
 
 Add this line to your application's Gemfile:
 
-    gem "scrawl", "~> 1.1"
+    gem "scrawl", "~> 2.0"
 
 And then execute:
 
@@ -133,7 +133,7 @@ Contributing
 License
 =======
 
-Copyright (c) 2014, 2015 Kurtis Rainbolt-Greene
+Copyright (c) 2014-2015 Kurtis Rainbolt-Greene
 
 MIT License
 

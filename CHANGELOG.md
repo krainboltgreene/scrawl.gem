@@ -1,8 +1,5 @@
 Changelog
 =========
 
-  - 1.1.0:
-    * Updating CoC
-    * Adding Regexp support
-    * Allowing for use of `#to_s`
+  - 2.0.0: Changed how Regexp outputs
   - 1.0.0: Initial release
