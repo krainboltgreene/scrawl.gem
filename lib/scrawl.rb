@@ -4,6 +4,7 @@ class Scrawl
   KEY_VALUE_DELIMITER = "="
   PAIR_DELIMITER = " "
   NAMESPACE_DELIMITER = "."
+  DEFAULT_SPLAT_CHARACTER="*"
 
   def initialize(*trees)
     @tree = trees.inject({}) { |global, tree| global.merge(tree) }
@@ -16,12 +17,11 @@ class Scrawl
   def inspect(namespace = nil)
     tree.map do |key, value|
       case
-      when value.kind_of?(Hash) && value.none?
-        label(namespace, key) + KEY_VALUE_DELIMITER + element(nil)
-      when value.respond_to?(:to_hash)
-        Scrawl.new(value).inspect(key)
-      else
-        label(namespace, key) + KEY_VALUE_DELIMITER + element(value)
+        when value.nil? then nil
+        when value.respond_to?(:none?) && value.none? then nil
+        when value.respond_to?(:push) then itemize(namespace, key, value)
+        when value.respond_to?(:merge) then Scrawl.new(value).inspect(key)
+        else label(namespace, key) + KEY_VALUE_DELIMITER + element(value)
       end
     end.flatten.compact.join(PAIR_DELIMITER)
   end
@@ -58,6 +58,11 @@ class Scrawl
     @tree
   end
 
+  private def itemize(namespace, key, list)
+    list.map do |item|
+      label(namespace, label(key, DEFAULT_SPLAT_CHARACTER)) + KEY_VALUE_DELIMITER + element(item)
+    end
+  end
 
   require_relative "scrawl/version"
 end
