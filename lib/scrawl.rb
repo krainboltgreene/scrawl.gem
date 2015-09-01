@@ -5,8 +5,6 @@ class Scrawl
   PAIR_DELIMITER = " "
   NAMESPACE_DELIMITER = "."
 
-  require_relative "scrawl/version"
-
   def initialize(*trees)
     @tree = trees.inject({}) { |global, tree| global.merge(tree) }
   end
@@ -60,4 +58,6 @@ class Scrawl
     @tree
   end
 
+
+  require_relative "scrawl/version"
 end
