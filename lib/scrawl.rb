@@ -7,8 +7,6 @@ class Scrawl
 
   require_relative "scrawl/version"
 
-  attr_reader :tree
-
   def initialize(*trees)
     @tree = trees.inject({}) { |global, tree| global.merge(tree) }
   end
@@ -57,4 +55,9 @@ class Scrawl
       else value.inspect
     end
   end
+
+  private def tree
+    @tree
+  end
+
 end
