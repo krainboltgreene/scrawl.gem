@@ -14,7 +14,7 @@ class Scrawl
   end
 
   def inspect(namespace = nil)
-    @tree.map do |key, value|
+    tree.map do |key, value|
       case
       when value.kind_of?(Hash) && value.none?
         label(namespace, key) + KEY_VALUE_DELIMITER + element(nil)
