@@ -23,7 +23,7 @@ class Scrawl
       else
         label(namespace, key) + KEY_VALUE_DELIMITER + element(value)
       end
-    end.join(PAIR_DELIMITER)
+    end.flatten.compact.join(PAIR_DELIMITER)
   end
 
   def to_s(namespace = nil)
