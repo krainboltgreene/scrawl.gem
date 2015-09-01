@@ -1,4 +1,6 @@
 class Scrawl
+  include Enumerable
+
   KEY_VALUE_DELIMITER = "="
   PAIR_DELIMITER = " "
   NAMESPACE_DELIMITER = "."
@@ -30,6 +32,10 @@ class Scrawl
 
   def to_s(namespace = nil)
     inspect(namespace)
+  end
+
+  def each(&block)
+    tree.each(&block)
   end
 
   def to_hash
