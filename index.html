@@ -1,26 +1,53 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html>
   <head>
-    <meta charset="UTF-8">
-    <title>Scrawl.gem by krainboltgreene</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
-    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-  </head>
-  <body>
-    <section class="page-header">
-      <h1 class="project-name">Scrawl.gem</h1>
-      <h2 class="project-tagline">Turn hash-likes into simple key=value logging statements</h2>
-      <a href="https://github.com/krainboltgreene/scrawl.gem" class="btn">View on GitHub</a>
-      <a href="https://github.com/krainboltgreene/scrawl.gem/zipball/master" class="btn">Download .zip</a>
-      <a href="https://github.com/krainboltgreene/scrawl.gem/tarball/master" class="btn">Download .tar.gz</a>
-    </section>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=640">
 
-    <section class="main-content">
-      <ul>
-<li><a href="https://codeclimate.com/github/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/codeclimate/github/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Quality"></a></li>
+    <link rel="stylesheet" href="stylesheets/core.css" media="screen">
+    <link rel="stylesheet" href="stylesheets/mobile.css" media="handheld, only screen and (max-device-width:640px)">
+    <link rel="stylesheet" href="stylesheets/github-light.css">
+
+    <script type="text/javascript" src="javascripts/modernizr.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript" src="javascripts/headsmart.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('#main_content').headsmart()
+      })
+    </script>
+    <title>Scrawl.gem by krainboltgreene</title>
+  </head>
+
+  <body>
+    <a id="forkme_banner" href="https://github.com/krainboltgreene/scrawl.gem">View on GitHub</a>
+    <div class="shell">
+
+      <header>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <h1>Scrawl.gem</h1>
+            <h2>Turn hash-likes into simple key=value logging statements</h2>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+      </header>
+
+      <section id="downloads">
+        <span class="inner">
+          <a href="https://github.com/krainboltgreene/scrawl.gem/zipball/master" class="zip"><em>download</em> .ZIP</a><a href="https://github.com/krainboltgreene/scrawl.gem/tarball/master" class="tgz"><em>download</em> .TGZ</a>
+        </span>
+      </section>
+
+
+      <span class="banner-fix"></span>
+
+
+      <section id="main_content">
+        <ul>
+<li>[<img src="http://img.shields.io/codeclimate/github/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Quality">(<a href="https://codeclimate.com/github/krainboltgreene/scrawl.gem">https://codeclimate.com/github/krainboltgreene/scrawl.gem</a>)</li>
 <li><a href="https://codeclimate.com/github/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/codeclimate/coverage/github/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Coverage"></a></li>
 <li><a href="https://travis-ci.org/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/travis-ci/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Build"></a></li>
 <li><a href="https://gemnasium.com/krainboltgreene/scrawl.gem"><img src="http://img.shields.io/gemnasium/krainboltgreene/scrawl.gem.svg?style=flat-square" alt="Dependencies"></a></li>
@@ -116,7 +143,7 @@ application <span class="pl-k">=</span> <span class="pl-c1">Scrawl</span>.<span 
 
 <p>Add this line to your application's Gemfile:</p>
 
-<pre><code>gem "scrawl", "~&gt; 1.0"
+<pre><code>gem "scrawl", "~&gt; 3.0"
 </code></pre>
 
 <p>And then execute:</p>
@@ -133,6 +160,8 @@ application <span class="pl-k">=</span> <span class="pl-c1">Scrawl</span>.<span 
 <a id="contributing" class="anchor" href="#contributing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Contributing</h1>
 
 <ol>
+<li>Read the <a href="/CONDUCT.md">Code of Conduct</a>
+</li>
 <li>Fork it</li>
 <li>Create your feature branch (<code>git checkout -b my-new-feature</code>)</li>
 <li>Commit your changes (<code>git commit -am 'Add some feature'</code>)</li>
@@ -141,16 +170,9 @@ application <span class="pl-k">=</span> <span class="pl-c1">Scrawl</span>.<span 
 </ol>
 
 <h1>
-<a id="changelog" class="anchor" href="#changelog" aria-hidden="true"><span class="octicon octicon-link"></span></a>Changelog</h1>
-
-<ul>
-<li>1.0.0: Initial release</li>
-</ul>
-
-<h1>
 <a id="license" class="anchor" href="#license" aria-hidden="true"><span class="octicon octicon-link"></span></a>License</h1>
 
-<p>Copyright (c) 2014 Kurtis Rainbolt-Greene</p>
+<p>Copyright (c) 2014-2015 Kurtis Rainbolt-Greene</p>
 
 <p>MIT License</p>
 
@@ -172,16 +194,23 @@ NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
 LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
 WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+      </section>
 
-      <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/krainboltgreene/scrawl.gem">Scrawl.gem</a> is maintained by <a href="https://github.com/krainboltgreene">krainboltgreene</a>.</span>
-
-        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      <footer>
+        <span class="ribbon-outer">
+          <span class="ribbon-inner">
+            <p>this project by <a href="https://github.com/krainboltgreene">krainboltgreene</a> can be found on <a href="https://github.com/krainboltgreene/scrawl.gem">GitHub</a></p>
+          </span>
+          <span class="left-tail"></span>
+          <span class="right-tail"></span>
+        </span>
+        <p>Generated with <a href="https://pages.github.com">GitHub Pages</a> using Merlot</p>
+        <span class="octocat"></span>
       </footer>
 
-    </section>
+    </div>
 
-            <script type="text/javascript">
+              <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
           </script>
@@ -194,4 +223,3 @@ WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 
   </body>
 </html>
-
